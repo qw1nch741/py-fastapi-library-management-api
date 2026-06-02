@@ -32,7 +32,7 @@ def get_books_by_author(db: Session, author_id: int):
 
 
 def create_book(db: Session, book: schemas.BookCreate, author_id: int):
-    db_book = models.Book(title=book.title, summary=book.summary, author_id=author_id)
+    db_book = models.Book(title=book.title, summary=book.summary, author_id=author_id, publication_date=book.publication_date,)
 
     db.add(db_book)
 
